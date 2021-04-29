@@ -5,7 +5,7 @@
   <%= form_tag search_friend_path, remote: true, method: :get do%>
     <div class="form-group row">
       <div class="col-sm-9 no-right-padding">
-        <%= text_field_tag :name, params[:name], placeholder: "Frieds name", autofocus: true, class: "form-control form-control-lg"%>
+        <%= text_field_tag :friend, params[:firned], placeholder: "Frieds name", autofocus: true, class: "form-control form-control-lg"%>
       </div>
       <div class="col-sm-3 no-left-padding">
         <%= button_tag type: :submit, class: "btn btn-success" do %>
@@ -17,6 +17,7 @@
 </div>
 <div id="results">
 
+</div>
 
 <% if !@friends.empty? %>
   <%= render 'friends/list' %>
